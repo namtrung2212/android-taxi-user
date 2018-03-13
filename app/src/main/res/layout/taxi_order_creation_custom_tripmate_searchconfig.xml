@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:animateLayoutChanges="true"
+android:padding="5dp"
+android:orientation="vertical"
+android:id="@+id/searchHostArea">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:padding="0dp"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:text="Thành viên ban đầu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:inputType="textNoSuggestions"
+        android:layout_weight="0.6"/>
+
+
+    <com.sconnecting.userapp.base.ui.NTSpinner
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_weight="0.0"
+        android:text="Thành viên"
+        android:textSize="13dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:met_floatingLabel="none"
+        android:textAlignment="center"
+        android:id="@+id/cbMemberQty"
+        android:background="@drawable/textedit_blue"/>
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:padding="0dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:gravity="right">
+
+    <EditText
+        android:id="@+id/pickupDate"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:hint="Ngày"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:background="@drawable/textedit_blue"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/pickupTime"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:hint="Giờ"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:background="@drawable/textedit_blue"/>
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:padding="0dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:text="Phương tiện"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:inputType="textNoSuggestions"
+        android:layout_weight="0.6"/>
+
+    <com.sconnecting.userapp.base.ui.NTSpinner
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_weight="0.0"
+        android:text="@string/vehicletype"
+        android:textSize="13dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:met_floatingLabel="none"
+        android:textAlignment="center"
+        android:id="@+id/cbVehicleType"
+        android:background="@drawable/textedit_blue"/>
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:padding="0dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:text="Chất lượng"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:inputType="textNoSuggestions"
+        android:layout_weight="0.6"/>
+
+    <com.sconnecting.userapp.base.ui.NTSpinner
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_weight="0.0"
+        android:text="@string/qualityservice"
+        android:textSize="13dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:met_floatingLabel="none"
+        android:textAlignment="center"
+        android:id="@+id/cbQuality"
+        android:background="@drawable/textedit_blue"/>
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:padding="0dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:text="Cước ước tính "
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:inputType="textNoSuggestions"
+        android:layout_weight="0.5"/>
+
+
+    <TextView
+        android:text="0.000 đ"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:inputType="textNoSuggestions"
+        android:layout_weight="0.5"
+        android:textAlignment="viewEnd"
+        android:id="@+id/lblOrderPrice"/>
+
+</LinearLayout>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@drawable/button_style1_white"
+    android:id="@+id/btnSearchHostOrder"
+    android:textSize="14sp"
+    tools:text="TÌM NHÓM PHÙ HỢP"
+    android:textColor="#617D8A"
+    android:elevation="0dp"
+    android:textAllCaps="false"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:layout_marginTop="10dp"/>
+
+<TextView
+    android:text="Hệ thống sẽ tìm những nhóm đi chung phù hợp. \n Bạn có thể tự lập nhóm mới với tư cách là trưởng nhóm."
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:lines="2"
+    android:maxLines="2"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="5dp"
+    android:textColor="@color/light_gray"
+    android:textSize="11sp"/>
+
+
+</LinearLayout>

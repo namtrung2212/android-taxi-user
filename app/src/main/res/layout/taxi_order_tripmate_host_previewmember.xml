@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#5991C4"
+        android:minHeight="30dp"
+        android:id="@+id/mainToolbar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainToolbarConstraint">
+
+            <TextView
+                android:text="Đề nghị đi chung"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:id="@+id/toolbar_title"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="1dp"
+                android:paddingTop="0dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"  />
+
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnBack"
+                android:text="{fa-chevron-left}"
+                android:textSize="23sp"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="0dp"
+                android:gravity="center_horizontal"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp">
+
+        <fragment
+            android:id="@+id/googlemap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="0dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="vertical"
+            tools:ignore="ExtraText"
+            android:clickable="true"
+            android:layout_marginBottom="3dp"
+            android:padding="2dp"
+            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingRight="4dp">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:padding="0dp"
+                android:animateLayoutChanges="true"
+                android:clickable="true">
+
+
+                <ImageView
+                    app:srcCompat="@drawable/panel_gray"
+                    android:id="@+id/imgPanelOrderArea"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    />
+
+
+                <ImageButton
+                    android:layout_width="28dp"
+                    android:layout_height="23dp"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    app:srcCompat="@drawable/pickupicon"
+                    android:id="@+id/btnPickupIcon"
+                    android:background= "@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="0dp"/>
+
+
+
+                <ImageButton
+                    android:layout_width="28dp"
+                    android:layout_height="23dp"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    app:srcCompat="@drawable/dropicon"
+                    android:id="@+id/btnDropIcon"
+                    android:background= "@null"
+                    app:layout_constraintLeft_toLeftOf="@+id/btnPickupIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/btnPickupIcon"
+                    android:padding="0dp"/>
+
+
+                <TextView
+                    android:id="@+id/lblPickupPlace"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="G28 Hoàng Hoa Thám,phường 13, Tân Bình, Hồ Chí Minh"
+                    android:textColor="#4B4B4B"
+                    android:textSize="11dp"
+                    app:layout_constraintCenterY_toCenterY="@+id/btnPickupIcon"
+                    app:layout_constraintLeft_toRightOf="@+id/btnPickupIcon"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textStyle="normal|bold"
+                    android:layout_marginEnd="10dp"
+                    tools:layout_editor_absoluteY="505dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/line"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblPickupPlace"
+                    app:layout_constraintTop_toBottomOf="@+id/lblPickupPlace"
+                    app:layout_constraintRight_toRightOf="@+id/lblPickupPlace"
+                    android:layout_marginTop="1dp"
+                    android:background="#BFBFBF" />
+
+                <TextView
+                    android:id="@+id/lblDropPlace"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Đường Tần Thuỷ Vương, Bình Trị Đông B, Bình Tân, Hồ Chí Minh"
+                    android:textColor="#4B4B4B"
+                    android:textSize="11dp"
+                    app:layout_constraintCenterY_toCenterY="@+id/btnDropIcon"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblPickupPlace"
+                    app:layout_constraintRight_toRightOf="@+id/lblPickupPlace"
+                    android:textStyle="normal|bold"
+                    tools:layout_editor_absoluteY="528dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/line"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                    app:layout_constraintTop_toBottomOf="@+id/lblDropPlace"
+                    app:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                    android:layout_marginTop="1dp"
+                    android:background="#BFBFBF" />
+
+
+                <TextView
+                    android:id="@+id/lblPickupTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="15/6/2016 4:55 PM"
+                    android:textColor="#818181"
+                    android:textSize="12dp"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblMateBenifitRatio"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                    android:textStyle="normal"
+                    tools:layout_editor_absoluteY="576dp" />
+
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/icoPickupTime"
+                    android:text="{fa-clock-o}"
+                    android:textSize="12sp"
+                    android:textColor="#498BC7"
+                    app:layout_constraintCenterX_toCenterX="@+id/btnDropIcon"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblPickupTime"
+                    android:padding="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    tools:layout_editor_absoluteY="576dp"
+                    tools:layout_editor_absoluteX="-14dp" />
+
+
+
+                <TextView
+                    android:id="@+id/lblMemberQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="2 người"
+                    android:textColor="#818181"
+                    android:textSize="12dp"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblMateDistanceIncreaseRatio"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                    android:textStyle="normal"
+                    tools:layout_editor_absoluteY="599dp" />
+
+
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/icoRemainMemberQty"
+                    android:text="{fa-users}"
+                    android:textSize="12sp"
+                    android:textColor="#498BC7"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblMemberQty"
+                    app:layout_constraintCenterX_toCenterX="@+id/btnDropIcon"
+                    android:padding="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/lblMateOrderPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:text="250.000 đ"
+                    android:textColor="#3188C7"
+                    android:textSize="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lblDropPlace"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/lblDescMateOrderPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Tiền cước :"
+                    android:textColor="#818181"
+                    android:textSize="12dp"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblMateOrderPrice"
+                    app:layout_constraintRight_toLeftOf="@+id/lblMateOrderPrice"
+                    android:textStyle="normal"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="30dp"
+                    tools:layout_editor_absoluteY="553dp" />
+
+
+                <TextView
+                    android:id="@+id/lblMateBenifitRatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:text="15%"
+                    android:textColor="#3188C7"
+                    android:textSize="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lblMateOrderPrice"
+                    app:layout_constraintRight_toRightOf="@+id/lblMateOrderPrice"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Tiết kiệm thêm :"
+                    android:textColor="#818181"
+                    android:textSize="12dp"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblMateBenifitRatio"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblDescMateOrderPrice"
+                    android:textStyle="normal"
+                    tools:layout_editor_absoluteY="576dp" />
+
+                <TextView
+                    android:id="@+id/lblMateDistanceIncreaseRatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:text="25%"
+                    android:textColor="#3188C7"
+                    android:textSize="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lblMateBenifitRatio"
+                    app:layout_constraintRight_toRightOf="@+id/lblMateBenifitRatio"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Quãng đường tăng :"
+                    android:textColor="#818181"
+                    android:textSize="12dp"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblMateDistanceIncreaseRatio"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblDescMateOrderPrice"
+                    android:textStyle="normal"
+                    tools:layout_editor_absoluteY="599dp" />
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#787878"
+                    android:textSize="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lblMateDistanceIncreaseRatio"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblMateDistanceIncreaseRatio"
+                    android:textStyle="normal" />
+
+
+            </android.support.constraint.ConstraintLayout>>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:padding="1dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_style1_blue"
+                    android:id="@+id/btnAccept"
+                    android:textSize="14sp"
+                    tools:text="THÊM THÀNH VIÊN"
+                    android:textColor="@android:color/white"
+                    android:elevation="0dp"
+                    android:textAllCaps="false"
+                    android:padding="0dp"
+                    android:layout_marginRight="2dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_style1_orrange"
+                    android:id="@+id/btnReject"
+                    android:textSize="14sp"
+                    tools:text="TỪ CHỐI"
+                    android:textColor="@android:color/white"
+                    android:elevation="0dp"
+                    android:textAllCaps="false"
+                    android:padding="0dp"
+                    android:layout_marginLeft="2dp"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
+

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="#5991C4"
+        android:minHeight="30dp"
+        android:id="@+id/mainToolbar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintCenterX_toCenterX="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainToolbarConstraint">
+
+            <TextView
+                android:text="Nhóm Đi Chung Phù Hợp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:id="@+id/toolbar_title"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="1dp"
+                android:paddingTop="0dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"  />
+
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnBack"
+                android:text="{fa-chevron-left}"
+                android:textSize="23sp"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="0dp"
+                android:gravity="center_horizontal"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <fragment
+        android:id="@+id/googlemap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCenterX_toCenterX="parent"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        tools:ignore="ExtraText"
+        android:clickable="true"
+        android:layout_marginBottom="3dp"
+        android:padding="2dp"
+        android:paddingLeft="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingRight="4dp"
+        android:gravity="bottom"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="3dp"
+            android:animateLayoutChanges="true"
+            android:clickable="true">
+
+
+                        <ImageView
+                            app:srcCompat="@drawable/panel_gray"
+                            android:id="@+id/imgPanelOrderArea"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            />
+
+                            <ImageButton
+                                android:layout_width="28dp"
+                                android:layout_height="23dp"
+                                android:scaleX="0.6"
+                                android:scaleY="0.6"
+                                app:srcCompat="@drawable/pickupicon"
+                                android:id="@+id/btnPickupIcon"
+                                android:background= "@null"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginTop="10dp"
+                                android:padding="0dp"/>
+
+
+
+                            <ImageButton
+                                android:layout_width="28dp"
+                                android:layout_height="23dp"
+                                android:scaleX="0.6"
+                                android:scaleY="0.6"
+                                app:srcCompat="@drawable/dropicon"
+                                android:id="@+id/btnDropIcon"
+                                android:background= "@null"
+                                app:layout_constraintLeft_toLeftOf="@+id/btnPickupIcon"
+                                app:layout_constraintTop_toBottomOf="@+id/btnPickupIcon"
+                                android:layout_marginTop="5dp"
+                                android:padding="0dp"/>
+
+
+                            <TextView
+                                android:id="@+id/lblPickupPlace"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="G28 Hoàng Hoa Thám,phường 13, Tân Bình, Hồ Chí Minh"
+                                android:textColor="#4B4B4B"
+                                android:textSize="10dp"
+                                app:layout_constraintCenterY_toCenterY="@+id/btnPickupIcon"
+                                app:layout_constraintLeft_toRightOf="@+id/btnPickupIcon"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="4dp"
+                                android:textStyle="normal|bold"
+                                tools:layout_editor_absoluteY="519dp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/line"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblPickupPlace"
+                                app:layout_constraintTop_toBottomOf="@+id/lblPickupPlace"
+                                app:layout_constraintRight_toRightOf="@+id/lblPickupPlace"
+                                android:layout_marginTop="1dp"
+                                android:background="#BFBFBF" />
+
+                            <TextView
+                                android:id="@+id/lblDropPlace"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="Đường Tần Thuỷ Vương, Bình Trị Đông B, Bình Tân, Hồ Chí Minh"
+                                android:textColor="#4B4B4B"
+                                android:textSize="10dp"
+                                app:layout_constraintCenterY_toCenterY="@+id/btnDropIcon"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblPickupPlace"
+                                app:layout_constraintRight_toRightOf="@+id/lblPickupPlace"
+                                android:textStyle="normal|bold"
+                                tools:layout_editor_absoluteY="542dp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/line"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                                app:layout_constraintTop_toBottomOf="@+id/lblDropPlace"
+                                app:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                                android:layout_marginTop="1dp"
+                                android:background="#BFBFBF" />
+                            <TextView
+                                android:id="@+id/lblPickupTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="ngay bây giờ"
+                                android:textColor="#787878"
+                                android:textSize="11dp"
+                                app:layout_constraintTop_toBottomOf="@+id/lblDropPlace"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                                app:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                                android:layout_marginTop="10dp"
+                                android:textStyle="normal" />
+
+                            <com.joanzapata.iconify.widget.IconTextView
+                                android:id="@+id/icoPickupTime"
+                                android:text="{fa-clock-o}"
+                                android:textSize="12sp"
+                                android:textColor="#498BC7"
+                                app:layout_constraintCenterX_toCenterX="@+id/btnDropIcon"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblPickupTime"
+                                android:padding="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                tools:layout_editor_absoluteY="563dp"
+                                tools:layout_editor_absoluteX="-14dp" />
+
+                            <TextView
+                                android:id="@+id/lblSeaterAndQuality"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:textColor="#787878"
+                                android:textSize="11dp"
+                                app:layout_constraintTop_toBottomOf="@+id/lblPickupTime"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                                app:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                                android:layout_marginTop="10dp"
+                                android:textStyle="normal" />
+
+
+                            <com.joanzapata.iconify.widget.IconTextView
+                                android:id="@+id/icoSeaterAndQuality"
+                                android:text="{fa-car}"
+                                android:textSize="12sp"
+                                android:textColor="#498BC7"
+                                app:layout_constraintCenterX_toCenterX="@+id/icoPickupTime"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblSeaterAndQuality"
+                                android:padding="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                tools:layout_editor_absoluteY="585dp"
+                                tools:layout_editor_absoluteX="-4dp" />
+
+                            <TextView
+                                android:id="@+id/lblRemainMemberQty"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:textColor="#787878"
+                                android:textSize="11dp"
+                                app:layout_constraintTop_toBottomOf="@+id/icoSeaterAndQuality"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                                app:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                                android:layout_marginTop="10dp"
+                                android:textStyle="normal" />
+
+
+                            <com.joanzapata.iconify.widget.IconTextView
+                                android:id="@+id/icoRemainMemberQty"
+                                android:text="{fa-users}"
+                                android:textSize="12sp"
+                                android:textColor="#498BC7"
+                                app:layout_constraintCenterX_toCenterX="@+id/icoPickupTime"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblRemainMemberQty"
+                                android:padding="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                tools:layout_editor_absoluteY="607dp"
+                                tools:layout_editor_absoluteX="-10dp" />
+
+                            <TextView
+                                android:id="@+id/lblMateOrderPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="bottom"
+                                android:maxLines="1"
+                                android:text="250.000 đ"
+                                android:textColor="#555555"
+                                android:textSize="18sp"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblSeaterAndQuality"
+                                app:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                                android:textStyle="normal|bold"
+                                tools:layout_editor_absoluteY="581dp" />
+
+                            <TextView
+                                android:id="@+id/lblMateBenifit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="bottom"
+                                android:maxLines="1"
+                                android:text="-50.000 đ"
+                                android:textColor="#EC4745"
+                                android:textSize="12sp"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblPickupTime"
+                                app:layout_constraintRight_toRightOf="@+id/lblMateOrderPrice"
+                                android:layout_marginEnd="1dp"
+                                android:textStyle="normal|bold"
+                                tools:layout_editor_absoluteY="563dp" />
+
+                            <TextView
+                                android:id="@+id/lblMateLowestPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="bottom"
+                                android:maxLines="1"
+                                android:text="50.000 đ"
+                                android:textColor="#555555"
+                                android:textSize="14sp"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblRemainMemberQty"
+                                app:layout_constraintRight_toRightOf="@+id/lblMateOrderPrice"
+                                android:layout_marginEnd="1dp"
+                                android:textStyle="normal|bold"
+                                tools:layout_editor_absoluteY="606dp" />
+
+                            <TextView
+                                android:id="@+id/lblDescMateOrderPrice"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="chỉ còn "
+                                android:textColor="#787878"
+                                android:textSize="10dp"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblMateOrderPrice"
+                                app:layout_constraintRight_toLeftOf="@+id/lblMateOrderPrice"
+                                android:textStyle="normal"
+                                android:layout_marginEnd="30dp"
+                                tools:layout_editor_absoluteY="586dp" />
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="tiết kiệm "
+                                android:textColor="#787878"
+                                android:textSize="10dp"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblMateBenifit"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblDescMateOrderPrice"
+                                android:textStyle="normal"
+                                tools:layout_editor_absoluteY="564dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblDescMateLowestPrice"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="có thể giảm còn "
+                                android:textColor="#787878"
+                                android:textSize="10dp"
+                                app:layout_constraintCenterY_toCenterY="@+id/lblMateLowestPrice"
+                                app:layout_constraintLeft_toLeftOf="@+id/lblDescMateOrderPrice"
+                                android:textStyle="normal"
+                                tools:layout_editor_absoluteY="608dp" />
+
+
+                              <View
+                                  android:layout_width="0dp"
+                                  android:layout_height="10dp"
+                                  app:layout_constraintTop_toBottomOf="@+id/lblDescMateLowestPrice"
+                                  app:layout_constraintLeft_toLeftOf="@+id/lblDescMateLowestPrice"/>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/button_style1_blue"
+            android:id="@+id/btnJoin"
+            android:textSize="14sp"
+            tools:text="THAM GIA"
+            android:textColor="@android:color/white"
+            android:elevation="0dp"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:padding="0dp"/>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,238 @@
+
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    android:id="@+id/constraintLayout"
+    tools:context="com.sconnecting.userapp.ui.taxi.order.creation.CustomOrderView">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_margin="0dp"
+        android:clickable="true"
+        android:id="@+id/pnlOrderInfoArea">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/panel_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="0dp"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pickupicon"
+            android:id="@+id/btnPickupIcon"
+            android:background= "@null"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp" />
+
+        <TextView
+            android:text="TextView TextView TextView Text "
+            android:layout_height="wrap_content"
+            android:id="@+id/lblPickupLocation"
+            android:textSize="12sp"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintCenterY_toCenterY="@+id/btnPickupIcon"
+            app:layout_constraintLeft_toRightOf="@+id/btnPickupIcon"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/line"
+            app:layout_constraintLeft_toLeftOf="@+id/lblPickupLocation"
+            app:layout_constraintTop_toBottomOf="@+id/lblPickupLocation"
+            app:layout_constraintRight_toRightOf="@+id/lblPickupLocation"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="#BFBFBF" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/dropicon"
+            android:id="@+id/btnDropIcon"
+            android:background= "@null"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnPickupIcon"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:text="TextView TextView TextView "
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDropLocation"
+            android:textSize="12sp"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintCenterY_toCenterY="@+id/btnDropIcon"
+            app:layout_constraintLeft_toRightOf="@+id/btnDropIcon"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/line"
+            app:layout_constraintLeft_toLeftOf="@+id/lblDropLocation"
+            app:layout_constraintTop_toBottomOf="@+id/lblDropLocation"
+            app:layout_constraintRight_toRightOf="@+id/lblDropLocation"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="#BFBFBF" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pnlOrderInfoArea"
+        app:layout_constraintBottom_toTopOf="@+id/pnlButtonArea"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:padding="0dp"
+        android:clickable="true"
+        android:id="@+id/pnlCustomArea">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/panel_blue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"/>
+
+
+
+        <android.support.v4.app.FragmentTabHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="3dp"
+            android:paddingBottom="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_margin="0dp"
+            android:id="@+id/tabhost"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:animateLayoutChanges="true">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:background="#5991C4"
+                    android:animateLayoutChanges="true">
+
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:animateLayoutChanges="true">
+
+                </FrameLayout>
+            </LinearLayout>
+        </android.support.v4.app.FragmentTabHost>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pnlButtonArea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingRight="3dp"
+        android:paddingLeft="3dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/button_style1_orrange"
+            android:id="@+id/btnCancelOrder"
+            android:textSize="15sp"
+            tools:text="HỦY YÊU CẦU"
+            android:textColor="@android:color/white"
+            android:elevation="0dp"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+

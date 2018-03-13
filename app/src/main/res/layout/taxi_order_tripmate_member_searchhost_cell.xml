@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="3dp"
+
+    android:layout_centerHorizontal="true"
+    android:background="#ffffff"
+    cardview:cardElevation="5dp"
+    cardview:cardCornerRadius="0dp"
+    cardview:contentPadding="5dp"
+    cardview:cardBackgroundColor="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayout">
+
+
+            <ImageButton
+                android:layout_width="28dp"
+                android:layout_height="23dp"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                app:srcCompat="@drawable/pickupicon"
+                android:id="@+id/btnPickupIcon"
+                android:background= "@null"
+                cardview:layout_constraintLeft_toLeftOf="parent"
+                cardview:layout_constraintTop_toTopOf="parent"
+                android:padding="0dp"/>
+
+
+
+            <ImageButton
+                android:layout_width="28dp"
+                android:layout_height="23dp"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                app:srcCompat="@drawable/dropicon"
+                android:id="@+id/btnDropIcon"
+                android:background= "@null"
+                cardview:layout_constraintLeft_toLeftOf="@+id/btnPickupIcon"
+                cardview:layout_constraintTop_toBottomOf="@+id/btnPickupIcon"
+                android:padding="0dp"/>
+
+
+            <TextView
+                android:id="@+id/lblPickupPlace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="G28 Hoàng Hoa Thám,phường 13, Tân Bình, Hồ Chí Minh"
+                android:textColor="#4B4B4B"
+                android:textSize="10dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/btnPickupIcon"
+                cardview:layout_constraintLeft_toRightOf="@+id/btnPickupIcon"
+                cardview:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="4dp"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteY="41dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/line"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblPickupPlace"
+                cardview:layout_constraintTop_toBottomOf="@+id/lblPickupPlace"
+                cardview:layout_constraintRight_toRightOf="@+id/lblPickupPlace"
+                android:layout_marginTop="1dp"
+                android:background="#BFBFBF" />
+
+            <TextView
+                android:id="@+id/lblDropPlace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="Đường Tần Thuỷ Vương, Bình Trị Đông B, Bình Tân, Hồ Chí Minh"
+                android:textColor="#4B4B4B"
+                android:textSize="10dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/btnDropIcon"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblPickupPlace"
+                cardview:layout_constraintRight_toRightOf="@+id/lblPickupPlace"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteY="64dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/line"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                cardview:layout_constraintTop_toBottomOf="@+id/lblDropPlace"
+                cardview:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                android:layout_marginTop="1dp"
+                android:background="#BFBFBF" />
+            <TextView
+                android:id="@+id/lblPickupTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="ngay bây giờ"
+                android:textColor="#787878"
+                android:textSize="11dp"
+                cardview:layout_constraintTop_toBottomOf="@+id/lblDropPlace"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                cardview:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                android:layout_marginTop="10dp"
+                android:textStyle="normal" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/icoPickupTime"
+                android:text="{fa-clock-o}"
+                android:textSize="12sp"
+                android:textColor="#498BC7"
+                cardview:layout_constraintCenterX_toCenterX="@+id/btnDropIcon"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblPickupTime"
+                android:padding="0dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:layout_editor_absoluteY="85dp"
+                tools:layout_editor_absoluteX="-4dp" />
+
+            <TextView
+                android:id="@+id/lblSeaterAndQuality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="0"
+                android:textColor="#787878"
+                android:textSize="11dp"
+                cardview:layout_constraintTop_toBottomOf="@+id/lblPickupTime"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                cardview:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                android:layout_marginTop="8dp"
+                android:textStyle="normal" />
+
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/icoSeaterAndQuality"
+                android:text="{fa-car}"
+                android:textSize="12sp"
+                android:textColor="#498BC7"
+                cardview:layout_constraintCenterX_toCenterX="@+id/icoPickupTime"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblSeaterAndQuality"
+                android:padding="0dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:layout_editor_absoluteY="107dp"
+                tools:layout_editor_absoluteX="5dp" />
+
+            <TextView
+                android:id="@+id/lblRemainMemberQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="0"
+                android:textColor="#787878"
+                android:textSize="11dp"
+                cardview:layout_constraintTop_toBottomOf="@+id/icoSeaterAndQuality"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDropPlace"
+                cardview:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                android:layout_marginTop="8dp"
+                android:textStyle="normal" />
+
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/icoRemainMemberQty"
+                android:text="{fa-users}"
+                android:textSize="12sp"
+                android:textColor="#498BC7"
+                cardview:layout_constraintCenterX_toCenterX="@+id/icoPickupTime"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblRemainMemberQty"
+                android:padding="0dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:layout_editor_absoluteY="129dp"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/lblMateBenifit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:text="-50.000 đ"
+                android:textColor="#EC4745"
+                android:textSize="12sp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblPickupTime"
+                cardview:layout_constraintRight_toRightOf="@+id/lblMateOrderPrice"
+                android:layout_marginEnd="1dp"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteY="85dp" />
+
+            <TextView
+                android:id="@+id/lblDescMateBenifit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="tiết kiệm "
+                android:textColor="#787878"
+                android:textSize="10dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblMateBenifit"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDescMateOrderPrice"
+                android:textStyle="normal"
+                tools:layout_editor_absoluteY="87dp" />
+
+            <TextView
+                android:id="@+id/lblMateOrderPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:text="250.000 đ"
+                android:textColor="#555555"
+                android:textSize="18sp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblSeaterAndQuality"
+                cardview:layout_constraintRight_toRightOf="@+id/lblDropPlace"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteY="103dp" />
+
+            <TextView
+                android:id="@+id/lblDescMateOrderPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="chỉ còn "
+                android:textColor="#787878"
+                android:textSize="10dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblSeaterAndQuality"
+                cardview:layout_constraintRight_toLeftOf="@+id/lblMateOrderPrice"
+                android:textStyle="normal"
+                android:layout_marginEnd="30dp"
+                tools:layout_editor_absoluteY="108dp" />
+
+
+            <TextView
+                android:id="@+id/lblMateLowestPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:text="50.000 đ"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                cardview:layout_constraintTop_toBottomOf="@+id/lblDescMateOrderPrice"
+                cardview:layout_constraintRight_toRightOf="@+id/lblMateOrderPrice"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="1dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/lblDescMateLowestPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="có thể giảm còn "
+                android:textColor="#787878"
+                android:textSize="10dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblMateLowestPrice"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDescMateOrderPrice"
+                android:textStyle="normal"
+                tools:layout_editor_absoluteY="128dp" />
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

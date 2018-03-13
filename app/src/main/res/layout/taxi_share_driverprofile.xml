@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#5991C4"
+        android:minHeight="30dp"
+        android:id="@+id/mainToolbar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="TÀI XẾ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:id="@+id/toolbar_title"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"
+                android:layout_centerInParent="true"/>
+
+
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnBack"
+                android:text="{fa-chevron-left}"
+                android:textSize="23sp"
+                android:textColor="@android:color/white"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E4E4E4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileView">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/panel_gray"
+                    android:id="@+id/pnlProfileArea"
+                    android:padding="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription=""
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="90dp"
+                    android:layout_height="91dp"
+                    app:civ_border_color="#737373"
+                    app:civ_border_width="0.5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar"
+                    app:layout_constraintLeft_toLeftOf="@+id/pnlProfileArea"
+                    app:layout_constraintTop_toTopOf="@+id/pnlProfileArea"
+                    android:layout_margin="20dp"/>
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar3"
+                    app:layout_constraintCenterX_toCenterX="@+id/imgAvatar"
+                    app:layout_constraintTop_toBottomOf="@+id/imgAvatar"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintRight_toRightOf="@+id/imgAvatar"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgAvatar" />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar2"
+                    app:layout_constraintCenterY_toCenterY="@+id/imgStar3"
+                    app:layout_constraintLeft_toRightOf="@+id/imgStar3"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgStar3"
+                    app:layout_constraintTop_toTopOf="@+id/imgStar3" />
+
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar1"
+                    app:layout_constraintCenterY_toCenterY="@+id/imgStar2"
+                    app:layout_constraintLeft_toRightOf="@+id/imgStar2"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription=""
+                    app:layout_constraintBottom_toBottomOf="@+id/imgStar2"
+                    app:layout_constraintTop_toTopOf="@+id/imgStar2" />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar4"
+                    app:layout_constraintCenterY_toCenterY="@+id/imgStar3"
+                    app:layout_constraintRight_toLeftOf="@+id/imgStar3"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgStar3"
+                    app:layout_constraintTop_toTopOf="@+id/imgStar3" />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar5"
+                    app:layout_constraintCenterY_toCenterY="@+id/imgStar4"
+                    app:layout_constraintRight_toLeftOf="@+id/imgStar4"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgStar4"
+                    app:layout_constraintTop_toTopOf="@+id/imgStar4" />
+
+
+                <TextView
+                    android:id="@+id/lblRateCountValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="4 đánh giá"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintCenterX_toCenterX="@+id/imgAvatar"
+                    app:layout_constraintTop_toBottomOf="@+id/imgStar1"
+                    android:textStyle="normal"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="17dp"
+                    app:layout_constraintRight_toRightOf="@+id/imgAvatar"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgAvatar" />
+
+
+                <TextView
+                    android:id="@+id/lblCitizenID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="CMND :"
+                    android:textColor="#818181"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@+id/imgAvatar"
+                    app:layout_constraintTop_toTopOf="@+id/pnlProfileArea"
+                    android:textStyle="normal"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginStart="25dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblCitizenIDValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="13215611561"
+                    android:textColor="#818181"
+                    android:textSize="12sp"
+                    app:layout_constraintRight_toRightOf="@+id/pnlProfileArea"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblCitizenID"
+                    android:textStyle="normal"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblCitizenID"
+                    app:layout_constraintTop_toTopOf="@+id/lblCitizenID" />
+
+
+                <TextView
+                    android:id="@+id/lblCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Hãng xe :"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblCitizenID"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCitizenID"
+                    android:textStyle="normal"
+                    android:layout_marginTop="2dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblCompanyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="13215611561"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintRight_toRightOf="@+id/lblCitizenIDValue"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblCompany"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblCompany"
+                    app:layout_constraintTop_toTopOf="@+id/lblCompany" />
+
+
+                <TextView
+                    android:id="@+id/lblVehicleNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Biển số :"
+                    android:textColor="#818181"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblCitizenID"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCompany"
+                    android:textStyle="normal"
+                    android:layout_marginTop="2dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblVehicleNoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="13215611561"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintRight_toRightOf="@+id/lblCitizenIDValue"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblVehicleNo"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblVehicleNo"
+                    app:layout_constraintTop_toTopOf="@+id/lblVehicleNo" />
+
+
+                <TextView
+                    android:id="@+id/lblVehicleSeater"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Số ghế :"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblCitizenID"
+                    app:layout_constraintTop_toBottomOf="@+id/lblVehicleNo"
+                    android:textStyle="normal"
+                    android:layout_marginTop="2dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblVehicleSeaterValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="13215611561"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintRight_toRightOf="@+id/lblCitizenIDValue"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblVehicleSeater"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblVehicleSeater"
+                    app:layout_constraintTop_toTopOf="@+id/lblVehicleSeater" />
+
+                <TextView
+                    android:id="@+id/lblVehicleQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Chất lượng :"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblCitizenID"
+                    app:layout_constraintTop_toBottomOf="@+id/lblVehicleSeater"
+                    android:textStyle="normal"
+                    android:layout_marginTop="2dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblVehicleQualityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="13215611561"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintRight_toRightOf="@+id/lblCitizenIDValue"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblVehicleQuality"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblVehicleQuality"
+                    app:layout_constraintTop_toTopOf="@+id/lblVehicleQuality" />
+
+
+                <TextView
+                    android:id="@+id/lblServedQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Đã phục vụ :"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblCitizenID"
+                    app:layout_constraintTop_toBottomOf="@+id/lblVehicleQuality"
+                    android:textStyle="normal"
+                    android:layout_marginTop="2dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblServedQtyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="13215611561"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintRight_toRightOf="@+id/lblCitizenIDValue"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblServedQty"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblServedQty"
+                    app:layout_constraintTop_toTopOf="@+id/lblServedQty" />
+
+
+                <TextView
+                    android:id="@+id/lblVoidedBfPickupByDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="Hủy đón :"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/lblCitizenID"
+                    app:layout_constraintTop_toBottomOf="@+id/lblServedQty"
+                    android:textStyle="normal"
+                    android:layout_marginTop="2dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblVoidedBfPickupByDriverValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="13215611561"
+                    android:textColor="#818181"
+                    android:textSize="13sp"
+                    app:layout_constraintRight_toRightOf="@+id/lblCitizenIDValue"
+                    app:layout_constraintCenterY_toCenterY="@+id/lblVoidedBfPickupByDriver"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblVoidedBfPickupByDriver"
+                    app:layout_constraintTop_toTopOf="@+id/lblVoidedBfPickupByDriver" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/lblEstPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="#595959"
+                android:textSize="24sp"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="#595959"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style1_blue"
+                android:id="@+id/btnSendRequest"
+                android:textSize="16sp"
+                tools:text="ĐỀ NGHỊ ĐÓN NGAY"
+                android:textColor="@android:color/white"
+                android:elevation="0dp"
+                android:textAllCaps="false"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style1_gray"
+                android:id="@+id/btnCancelRequest"
+                android:textSize="16sp"
+                tools:text="HỦY ĐÓN"
+                android:textColor="@android:color/white"
+                android:elevation="0dp"
+                android:textAllCaps="false"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style1_blue"
+                android:id="@+id/btnAcceptBidding"
+                android:textSize="16sp"
+                tools:text="CHẤP NHẬN TÀI XẾ"
+                android:textColor="@android:color/white"
+                android:elevation="0dp"
+                android:textAllCaps="false"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style1_gray"
+                android:id="@+id/btnCancelBidding"
+                android:textSize="16sp"
+                tools:text="TỪ CHỐI"
+                android:textColor="@android:color/white"
+                android:elevation="0dp"
+                android:textAllCaps="false"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/commentView"
+                android:background="#E4E4E4"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+

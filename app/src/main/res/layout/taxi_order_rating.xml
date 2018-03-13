@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="0dp"
+    android:padding="4dp"
+    android:animateLayoutChanges="true"
+    android:clickable="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ratingArea">
+
+
+            <ImageView
+                app:srcCompat="@drawable/panel_gray"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+
+
+
+                <TextView
+                    android:text="ĐÁNH GIÁ TÀI XẾ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblStatus"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="21sp"
+                    android:textAlignment="center"
+                    android:textStyle="normal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"/>
+
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar3"
+                    android:contentDescription=""
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="55dp"/>
+
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar2"
+                    android:contentDescription=""
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_alignRight="@+id/imgStar3"
+                    android:layout_marginRight="55dp"
+                    android:layout_alignTop="@+id/imgStar3"/>
+
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:srcCompat="@drawable/star"
+                    android:id="@+id/imgStar1"
+                    android:contentDescription=""
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_alignRight="@+id/imgStar2"
+                    android:layout_marginRight="55dp"
+                    android:layout_alignTop="@+id/imgStar2"/>
+
+
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:srcCompat="@drawable/graystar"
+                    android:id="@+id/imgStar4"
+                    android:contentDescription=""
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_alignLeft="@+id/imgStar3"
+                    android:layout_marginLeft="55dp"
+                    android:layout_alignTop="@+id/imgStar3"/>
+
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:srcCompat="@drawable/graystar"
+                    android:id="@+id/imgStar5"
+                    android:contentDescription=""
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_alignLeft="@+id/imgStar4"
+                    android:layout_marginLeft="55dp"
+                    android:layout_alignTop="@+id/imgStar4"/>
+
+
+                <TextView
+                    android:text="Hài lòng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblRateDesc"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:textStyle="normal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignTop="@id/imgStar3"
+                    android:layout_marginTop="60dp"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:inputType="textMultiLine"
+                    android:text=""
+                    android:gravity="top"
+                    android:id="@+id/txtComment"
+                    android:textSize="12sp"
+                    android:hint="Bạn có góp ý gì thêm không ? "
+                    android:foregroundTint="#565D5C"
+                    android:background="@drawable/panel_white"
+                    android:layout_alignTop="@id/lblRateDesc"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:padding="8dp"
+
+                    />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_style1_blue"
+                    android:id="@+id/btnSubmit"
+                    android:textSize="14sp"
+                    tools:text="GỬI ĐÁNH GIÁ"
+                    android:textColor="@android:color/white"
+                    android:elevation="0dp"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignBottom="@+id/lblNote"
+                    />
+
+                <TextView
+                    android:id="@+id/lblNote"
+                    android:text="Chân thành cảm ơn vì đã sử dụng dịch vụ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="11sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

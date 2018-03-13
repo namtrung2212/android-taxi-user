@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">SCUser</string>
+    <string name="action_settings">Settings</string>
+    <string name="rootScreenTitle">RootScreen</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="mapScreenTitle">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_app_root">SCUser</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <string name="all">All</string>
+    <string name="vehicletype">Vehicle</string>
+    <string name="qualityservice">Quality</string>
+
+
+    <string-array name="servicequalities">
+        <item>All</item>
+        <item>Popular</item>
+        <item>Economic</item>
+        <item>Luxury</item>
+    </string-array>
+
+
+    <string-array name="vehicletypes">
+        <item>All</item>
+        <item>4 seater taxi</item>
+        <item>7 seater taxi</item>
+        <item>8 seater taxi</item>
+        <item>9 seater taxi</item>
+        <item>11 seater taxi</item>
+        <item>16 seater taxi</item>
+    </string-array>
+
+    <string-array name="memberquantities">
+        <item>1 person</item>
+        <item>2 persons</item>
+        <item>3 persons</item>
+        <item>4 persons</item>
+        <item>5 persons</item>
+        <item>6 persons</item>
+        <item>7 persons</item>
+        <item>8 persons</item>
+        <item>9 persons</item>
+        <item>10 persons</item>
+    </string-array>
+
+
+    <string-array name="pickuptypes">
+        <item>Now</item>
+        <item>Later</item>
+    </string-array>
+
+
+
+</resources>

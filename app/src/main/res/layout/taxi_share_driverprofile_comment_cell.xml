@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="#E4E4E4"
+    cardview:cardElevation="0dp"
+    android:padding="0dp"
+    android:layout_margin="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:background="#E4E4E4">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayout"
+            android:padding="5dp"
+            android:layout_margin="0dp"
+            android:background="#E4E4E4">
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                app:civ_border_color="#737373"
+                app:civ_border_width="0.5dp"
+                cardview:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                cardview:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pnlCommentArea"
+                android:layout_centerHorizontal="true"
+                android:contentDescription=""
+                cardview:layout_constraintTop_toTopOf="@+id/imgAvatar"
+                cardview:layout_constraintLeft_toRightOf="@+id/imgAvatar"
+                cardview:layout_constraintRight_toRightOf="@+id/constraintLayout"
+                cardview:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                android:layout_marginStart="20dp"
+                cardview:srcCompat="@drawable/panel_comment" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/leftcomment"
+                android:id="@+id/imgLeftComment"
+                android:layout_centerHorizontal="true"
+                android:contentDescription=""
+                cardview:layout_constraintCenterY_toCenterY="@+id/imgAvatar"
+                cardview:layout_constraintLeft_toRightOf="@+id/imgAvatar"
+                android:layout_marginStart="3dp"/>
+
+
+            <TextView
+                android:id="@+id/lblUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="NGUYỄN VĂN A2"
+                android:textColor="#2A99D1"
+                android:textSize="12sp"
+                cardview:layout_constraintTop_toTopOf="@+id/pnlCommentArea"
+                cardview:layout_constraintLeft_toLeftOf="@+id/pnlCommentArea"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="normal|bold" />
+
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar1"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblUserName"
+                cardview:layout_constraintRight_toRightOf="@+id/pnlCommentArea"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="2dp"/>
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar2"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblUserName"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar1"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"/>
+
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar3"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblUserName"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar2"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"/>
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar4"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblUserName"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar3"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"/>
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar5"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblUserName"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar4"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp" android:gravity="fill"/>
+
+
+            <TextView
+                android:id="@+id/lblCreateDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="4 đánh giá"
+                android:textColor="#818181"
+                android:textSize="12sp"
+                cardview:layout_constraintRight_toRightOf="@+id/imgStar1"
+                cardview:layout_constraintTop_toBottomOf="@+id/imgStar1"
+                android:textStyle="normal"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp" />
+
+
+            <com.bluejamesbond.text.DocumentView
+                xmlns:ext="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/lblComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ext:documentView_antialias="true"
+                ext:documentView_cacheConfig="auto_quality"
+                ext:documentView_hyphen="-"
+                ext:documentView_maxLines="100"
+                ext:documentView_lineHeightMultiplier="1.1"
+                ext:documentView_text=""
+                ext:documentView_textAlignment="justified"
+                ext:documentView_textFormat="plain"
+                ext:documentView_textColor="#808080"
+                ext:documentView_textSize="12sp"
+                ext:documentView_insetPaddingRight="80dp"
+                ext:documentView_insetPaddingBottom="10dp"
+                cardview:layout_constraintTop_toBottomOf="@+id/lblCreateDate"
+                cardview:layout_constraintLeft_toLeftOf="@+id/pnlCommentArea"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="0dp"/>
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">SCUser</string>
+    <string name="action_settings">Settings</string>
+    <string name="rootScreenTitle">RootScreen</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="mapScreenTitle">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_app_root">SCUser</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <string name="all">Tất cả</string>
+    <string name="vehicletype">Phương tiện</string>
+    <string name="qualityservice">Chất lượng</string>
+
+
+    <string-array name="servicequalities">
+        <item>Tất cả</item>
+        <item>Phổ thông</item>
+        <item>Giá rẻ</item>
+        <item>Cao cấp</item>
+    </string-array>
+
+
+    <string-array name="vehicletypes">
+        <item>Tất cả</item>
+        <item>Taxi 4 chỗ</item>
+        <item>Taxi 7 chỗ</item>
+        <item>Taxi 8 chỗ</item>
+        <item>Taxi 9 chỗ</item>
+        <item>Taxi 11 chỗ</item>
+        <item>Taxi 16 chỗ</item>
+    </string-array>
+
+    <string-array name="memberquantities">
+        <item>1 người</item>
+        <item>2 người</item>
+        <item>3 người</item>
+        <item>4 người</item>
+        <item>5 người</item>
+        <item>6 người</item>
+        <item>7 người</item>
+        <item>8 người</item>
+        <item>9 người</item>
+        <item>10 người</item>
+    </string-array>
+
+
+    <string-array name="pickuptypes">
+        <item>Đi ngay</item>
+        <item>Th.gian cụ thể</item>
+    </string-array>
+
+</resources>

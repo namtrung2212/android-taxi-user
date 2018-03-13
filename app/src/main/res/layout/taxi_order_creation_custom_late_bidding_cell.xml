@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:layout_centerHorizontal="true"
+    android:background="#ffffff"
+    cardview:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayout">
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:civ_border_color="#737373"
+                app:civ_border_width="0.5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar"
+                android:layout_alignBottom="@+id/lblDriverName"
+                cardview:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+                cardview:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                cardview:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/lblDriverName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="NGUYỄN VĂN A2"
+                android:textColor="#4B4B4B"
+                android:textSize="14dp"
+                cardview:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                cardview:layout_constraintLeft_toRightOf="@+id/imgAvatar"
+                cardview:layout_constraintRight_toRightOf="@+id/constraintLayout"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:textStyle="normal|bold" />
+
+
+            <TextView
+                android:id="@+id/lblCompany"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="Company"
+                android:textColor="#818181"
+                android:textSize="12dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/imgAvatar"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDriverName"
+                cardview:layout_constraintRight_toRightOf="@+id/lblDriverName"
+                android:textStyle="normal"
+                cardview:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+                cardview:layout_constraintTop_toTopOf="@+id/imgAvatar" />
+
+            <TextView
+                android:id="@+id/lblSeaterAndQuality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="7 chỗ - phổ thong"
+                android:textColor="#787878"
+                android:textSize="12dp"
+                cardview:layout_constraintBottom_toBottomOf="@+id/line"
+                cardview:layout_constraintLeft_toLeftOf="@+id/lblDriverName"
+                cardview:layout_constraintRight_toRightOf="@+id/lblDriverName"
+                android:layout_marginBottom="5dp"
+                android:textStyle="normal|bold" />
+
+
+
+            <TextView
+                android:id="@+id/lblRateCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="4 luot"
+                android:textColor="#818181"
+                android:textSize="12dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblDriverName"
+                cardview:layout_constraintRight_toRightOf="@+id/line"
+                android:textStyle="normal"
+                cardview:layout_constraintBottom_toBottomOf="@+id/lblDriverName"
+                cardview:layout_constraintTop_toTopOf="@+id/lblDriverName" />
+
+
+
+            <TextView
+                android:id="@+id/lblEstPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:text="250.000 đ"
+                android:textColor="#3188C7"
+                android:textSize="15dp"
+                cardview:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                cardview:layout_constraintRight_toRightOf="@+id/line"
+                android:layout_marginBottom="3dp"
+                android:textStyle="normal|bold" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                cardview:srcCompat="@drawable/line"
+                android:id="@+id/line"
+                cardview:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                cardview:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+                cardview:layout_constraintRight_toRightOf="@+id/constraintLayout"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/black_overlay" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar1"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblCompany"
+                cardview:layout_constraintRight_toRightOf="@+id/constraintLayout"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="2dp"/>
+
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar2"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblCompany"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar1"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"/>
+
+
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar3"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblCompany"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar2"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"/>
+
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar4"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblCompany"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar3"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"/>
+
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                cardview:srcCompat="@drawable/star"
+                android:id="@+id/imgStar5"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                cardview:layout_constraintCenterY_toCenterY="@+id/lblCompany"
+                cardview:layout_constraintRight_toLeftOf="@+id/imgStar4"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"/>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

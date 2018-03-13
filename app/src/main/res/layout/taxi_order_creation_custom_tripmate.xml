@@ -1,0 +1,84 @@
+
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:padding="0dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:orientation="vertical"
+    tools:context="com.sconnecting.userapp.ui.taxi.order.creation.custom.TripMateConfigView"
+    android:background="#5991C4">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/reqRefreshControl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#5991C4">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:scrollbars="none"
+            android:background="#5991C4">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:orientation="vertical"
+                android:background="#5991C4">
+                <!-- Content here -->
+
+
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.sconnecting.userapp.ui.taxi.order.creation.custom.tripmate.TripMateHostInfoByMemberView"
+                    android:id="@+id/hostInfoByMemberFragment" />
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.sconnecting.userapp.ui.taxi.order.creation.custom.tripmate.TripMateSearchConfigView"
+                    android:id="@+id/searchHostFragment" />
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.sconnecting.userapp.ui.taxi.order.creation.custom.tripmate.TripMateCreateHostView"
+                    android:id="@+id/createHostFragment" />
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.sconnecting.userapp.ui.taxi.order.creation.custom.tripmate.TripMateHostInfoByHostView"
+                    android:id="@+id/hostInfoByHostFragment" />
+
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>
